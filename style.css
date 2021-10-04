@@ -1,0 +1,105 @@
+nav{
+    display: flex;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 5rem;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+}
+.logo{
+    position: relative;
+    left: 0px;
+}
+.hamburger_list ul{
+   /* Computer Display settings of navbar items*/
+    position: absolute;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    left: 49%;
+    top: 1rem;
+    font-size: larger;
+    font-weight: bold;
+}
+.hamburger_list ul a{
+    text-decoration: none;                    
+    /*removes underline of navbar links  */
+}
+@media only screen and (max-width: 600px) {
+    
+    .logo{
+        position: relative;
+        left: -18px;
+        width: 74%;
+        height: 67px;
+    }
+    .hamburger_box{
+        /* whole container of hamburger icon and links */
+        position: absolute;
+        right: 2%;
+        top: 20px;
+        
+    }
+    .hamburger_icon{
+        margin-left: -54%;
+        cursor: pointer;
+    }
+    .hamburger_icon span{
+        display: block;
+        width: 40px;
+        height: 5px;
+        margin-bottom: 3px;
+        background-color: #141616;
+        border-radius: 3px;
+        transition: ease-in-out .5s all;
+    }
+    .hamburger_icon span.ativo:first-of-type{
+        transform: translate(0, 8px) rotate(45deg);
+    }
+    .hamburger_icon span.ativo:last-of-type{
+        transform: translate(0, -8px) rotate(-45deg);
+    }
+    .hamburger_icon span.opacity.ativo{
+        opacity: 0;
+    }
+      
+    .hamburger_list{
+        position: relative;
+    }
+      
+    .hamburger_list ul{
+        position: absolute;
+        display: table-row-group;
+        left: 400%;
+        background-color: #4de6e6;
+        margin-top: 20px;
+        width: 8rem;
+        height: 270px;
+        transition: ease-out .7s all;
+    }
+    .hamburger_list ul.ativo{
+        left: -296%;
+        height: 270px;
+    }
+    .hamburger_list ul a:first-child{
+        margin-top: 15%;
+        
+    }
+    .hamburger_list ul a{
+        /* links inside the toggle box */
+        display: block;
+        position: relative;
+        right: 16px;
+        padding: 14px 16px;
+        text-align: center;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: 700;
+        color: #000;
+    }
+    .hamburger_list ul a:hover, .hamburger_list ul a:active{
+        background-color: aliceblue;
+    }
+    
+}
